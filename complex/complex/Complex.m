@@ -10,6 +10,9 @@
 
 @interface Complex ()
 
+@property (strong, nonatomic) NSNumber *real;
+@property (strong, nonatomic) NSNumber *imag;
+
 @end
 
 @implementation Complex
