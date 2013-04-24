@@ -78,8 +78,8 @@
 -(Complex *)div:(Complex *)compl
 {
     Complex *tmp = [[Complex alloc] init];
-    tmp.real = [NSNumber numberWithDouble:(([self.real doubleValue]*[compl.real doubleValue]+[self.imag doubleValue]*[compl.imag doubleValue])/(powf([compl.real doubleValue], 2.0)+powf([compl.imag doubleValue], 2.0)))];
-    tmp.imag = [NSNumber numberWithDouble:(([self.imag doubleValue]*[compl.real doubleValue]-[self.real doubleValue]*[compl.imag doubleValue])/(powf([compl.real doubleValue], 2.0)+powf([compl.imag doubleValue], 2.0)))];
+    tmp.real = [NSNumber numberWithDouble:(([self.real doubleValue]*[compl.real doubleValue]+[self.imag doubleValue]*[compl.imag doubleValue])/(pow([compl.real doubleValue], 2.0)+pow([compl.imag doubleValue], 2.0)))];
+    tmp.imag = [NSNumber numberWithDouble:(([self.imag doubleValue]*[compl.real doubleValue]-[self.real doubleValue]*[compl.imag doubleValue])/(pow([compl.real doubleValue], 2.0)+pow([compl.imag doubleValue], 2.0)))];
     self.real = tmp.real;
     self.imag = tmp.imag;
     return self;
